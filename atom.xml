@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-02T03:51:41.106Z</updated>
+  <updated>2018-04-02T11:35:47.913Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Markdown使用入门</title>
+    <link href="http://yoursite.com/2018/04/02/Markdown%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/"/>
+    <id>http://yoursite.com/2018/04/02/Markdown使用入门/</id>
+    <published>2018-04-02T11:34:43.000Z</published>
+    <updated>2018-04-02T11:35:47.913Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Markdown使用入门："><a href="#Markdown使用入门：" class="headerlink" title="Markdown使用入门："></a>Markdown使用入门：</h1><h2 id="1、特殊字符："><a href="#1、特殊字符：" class="headerlink" title="1、特殊字符："></a>1、特殊字符：</h2><p>对于部分Markdown语法中的特殊字符，需输出原字符的话，使用反斜线：即可。  如： &copy;：\&copy;</p><h2 id="2、换行"><a href="#2、换行" class="headerlink" title="2、换行"></a>2、换行</h2><p>上一行行尾至少有两个及以上的空格</p><h2 id="3、标题："><a href="#3、标题：" class="headerlink" title="3、标题："></a>3、标题：</h2><ol><li><p>类 Setext 形式：  </p><p> 代码:   </p><pre><code>This is an H1  =============  This is an H2  -------------</code></pre><p> 输出： </p><h1 id="This-is-an-H1"><a href="#This-is-an-H1" class="headerlink" title=" This is an H1  "></a> This is an H1  </h1><h2 id="This-is-an-H2"><a href="#This-is-an-H2" class="headerlink" title=" This is an H2  "></a> This is an H2  </h2></li></ol><ol start="2"><li><p>类 Atx 形式:  </p><p> 代码:   </p><pre><code># 这是 H1  ## 这是 H2 </code></pre><p> 输出： </p><h1 id="这是-H1"><a href="#这是-H1" class="headerlink" title="这是 H1"></a>这是 H1</h1><h2 id="这是-H2"><a href="#这是-H2" class="headerlink" title="这是 H2"></a>这是 H2</h2></li></ol><h2 id="4、区块引用"><a href="#4、区块引用" class="headerlink" title="4、区块引用"></a>4、区块引用</h2><p>每行的最前面加上 &gt;。<br>代码：  </p><pre><code>&gt; This is a blockquote with two paragraphs. </code></pre><p>输出：</p><blockquote><p>This is a blockquote with two paragraphs. </p></blockquote><p>多重嵌套：<br>代码：  </p><pre><code>&gt; &gt; This is nested blockquote.&gt;&gt; Back to the first level.</code></pre><p>输出：</p><blockquote><blockquote><p>This is nested blockquote.</p></blockquote><p>Back to the first level.</p></blockquote><p>嵌套其他 Markdown 语法：<br>代码：  </p><pre><code>&gt; ## 这是一个标题。&gt; &gt; 1.   这是第一行列表项。&gt; 2.   这是第二行列表项。&gt; &gt; 给出一些例子代码：&gt; &gt;     return shell_exec(&quot;echo $input | $markdown_script&quot;);</code></pre><p>输出：  </p><blockquote><h2 id="这是一个标题。"><a href="#这是一个标题。" class="headerlink" title="这是一个标题。"></a>这是一个标题。</h2><ol><li>这是第一行列表项。</li><li>这是第二行列表项。</li></ol><p>给出一些例子代码：</p><pre><code>return shell_exec(&quot;echo $input | $markdown_script&quot;);</code></pre></blockquote><h2 id="5、列表"><a href="#5、列表" class="headerlink" title="5、列表"></a>5、列表</h2><ol><li><p>无序列表使用星号、加号或是减号作为列表标记：<br> 代码：  </p><pre><code>* Red* yellow+ Green- Blu</code></pre><p> 输出：  </p><ul><li>Red</li><li>yellow</li></ul><ul><li>Green</li></ul><ul><li>Blu</li></ul></li><li><p>有序列表则使用数字接着一个英文句点：(表标记上使用的数字并不会影响输出结果)<br> 代码：  </p><pre><code>2.  Bird1.  McHale3.  Parish</code></pre><p> 输出：  </p><ol start="2"><li>Bird</li><li>McHale</li><li>Parish</li></ol></li><li><p>列表中加入引用，需用&gt; 缩进：<br> 代码：  </p><pre><code>+   A list item with a blockquote:  &gt; This is a blockquote&gt; inside a list item.</code></pre><p> 输出：  </p><ul><li>A list item with a blockquote:  <blockquote><p>This is a blockquote<br>inside a list item.</p></blockquote></li></ul></li></ol><h2 id="6、代码"><a href="#6、代码" class="headerlink" title="6、代码"></a>6、代码</h2><ol><li><p>代码区块：<br> 缩进 4 个空格或是 1 个制表符。  </p><pre><code>这是一个代码区块。</code></pre></li><li><p>标记小段行内代码：<br> 使用反引号把它包起来（`）,对于代码中的`，使用两个反引号括住（`` ) 。<br> 代码：</p><pre><code>Use the `printf()` function.``There is a literal backtick (`) here.``</code></pre><p> 输出：<br> Use the <code>printf()</code> function.<br> <code>There is a literal backtick (`) here.</code></p></li></ol><h2 id="7、分割线"><a href="#7、分割线" class="headerlink" title="7、分割线"></a>7、分割线</h2><p>一行中用三个以上的星号、减号、底线来建立一个分隔线。<br>代码：  </p><pre><code>* * *---</code></pre><p>输出：  </p><hr><hr><h2 id="8、链接"><a href="#8、链接" class="headerlink" title="8、链接"></a>8、链接</h2><ol><li><p>行内式链接：<br>方块括号后面紧接着圆括号并插入网址链接，后面紧接双引号包起的文字可以显示为链接提示文字。<br> 代码：   </p><pre><code>[This link](https://ivan4412.github.io/ &quot;Ivan的博客&quot;) has no title attribute.</code></pre><p> 输出:<br> <a href="https://ivan4412.github.io/" title="Ivan的博客" target="_blank" rel="noopener">This link</a> has no title attribute.</p></li><li><p>参考式链接：<br>在文中任意地方使用<br><em>[id]: + 链接地址</em><br>格式记录链接地址。<br>对于需链接文字，在链接文字括号后再接一个方括号，括号中内容为链接的标签id<br> 代码：</p><pre><code>This is [an example][ID1] reference-style link.  [ID1]: https://ivan4412.github.io/  &quot;Ivan的博客&quot;</code></pre><p> 输出：<br> This is <a href="https://ivan4412.github.io/" title="Ivan的博客" target="_blank" rel="noopener">an example</a> reference-style link.</p></li></ol><h2 id="9、强调"><a href="#9、强调" class="headerlink" title="9、强调"></a>9、强调</h2><p>使用**或__包住需强调的字词。<br>代码：  </p><pre><code>*single asterisks*  _single underscores_</code></pre><p>输出：<br><strong>single asterisks</strong><br> <strong>single underscores</strong></p><h2 id="10、图片"><a href="#10、图片" class="headerlink" title="10、图片"></a>10、图片</h2><p>图片链接方式和链接类似，亦分为行内式和参考式。</p><ol><li><p>行内式：<br> 使用!开头，紧接方括号括住的图片替代文字，紧接普通括号括住网址<br> 代码：</p><pre><code>![Ivanlogo](https://ivan4412.github.io/img/logo.jpg &quot;Ivan博客Logo&quot;)</code></pre><p> 输出：</p><p> <img src="https://ivan4412.github.io/img/logo.jpg" alt="Ivanlogo" title="Ivan博客Logo"></p></li><li><p>参考式：<br> 使用!开头，紧接方括号括住的图片替代文字，紧接方括号括住的地址标签id。<br> 代码：</p><pre><code>![Ivanlogo][img1]</code></pre><p> 输出：<br> <img src="https://ivan4412.github.io/img/logo.jpg" alt="Ivanlogo" title="Ivan博客Logo"></p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Markdown使用入门：&quot;&gt;&lt;a href=&quot;#Markdown使用入门：&quot; class=&quot;headerlink&quot; title=&quot;Markdown使用入门：&quot;&gt;&lt;/a&gt;Markdown使用入门：&lt;/h1&gt;&lt;h2 id=&quot;1、特殊字符：&quot;&gt;&lt;a href=&quot;#1、
+      
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo + Github Pages搭建个人博客</title>
