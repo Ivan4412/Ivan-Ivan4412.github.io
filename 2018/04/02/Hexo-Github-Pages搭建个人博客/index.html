@@ -11,10 +11,12 @@
     
     Hexo + Github Pages搭建个人博客 |
     
-    Ivan�ĸ��˲���</title>
+    Ivan&#39;s Blog</title>
 <!--end title-->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <!--begin mete-->
+
+<meta name="description" content="Ivan�ĸ��˲���"/>
 
 <meta name="author" content="Ivan Yang"/>
 
@@ -24,7 +26,7 @@
 <!--end keywords-->
 <!--begin rss-->
 
-<link rel="alternate" href="/atom.xml" title="Ivan�ĸ��˲���" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Ivan&#39;s Blog" type="application/atom+xml">
 
 <!--end rss-->
 <!--begin favicon-->
@@ -273,7 +275,7 @@
     </div>
     
     <h1 id="1、下载安装-Node-js"><a href="#1、下载安装-Node-js" class="headerlink" title="1、下载安装 Node.js"></a>1、下载安装 Node.js</h1><p>下载地址：<em><a href="https://nodejs.org/download/" target="_blank" rel="noopener">https://nodejs.org/download/</a></em>  </p>
-<p>进入release文件夹下载最近版本安装。<br><img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/downNodejs.jpg" alt="下载安装Nodejs" title="下载安装Node.js"><br>安装完成后，在cmd中输入”path”命令，可查看当前系统环境变量配置情况。其中可以看到nodejs已经配置好。<br><img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/nodejs_path.png" alt="下载安装Nodejs输入path命令" title="下载安装Node.js"><br>输入node -v，可查看当前版本。<br><img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/nodejs_version.png" alt="下载安装Nodejs输入node-v" title="下载安装Node.js"></p>
+<p>进入release文件夹下载最近版本安装。<br>    <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/downNodejs.jpg" alt="下载安装Nodejs" title="下载安装Node.js"><br>安装完成后，在cmd中输入”path”命令，可查看当前系统环境变量配置情况。其中可以看到nodejs已经配置好。<br>    <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/nodejs_path.png" alt="下载安装Nodejs输入path命令" title="下载安装Node.js"><br>输入node -v，可查看当前版本。<br>    <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/nodejs_version.png" alt="下载安装Nodejs输入node-v" title="下载安装Node.js"></p>
 <h1 id="2、安装Hexo"><a href="#2、安装Hexo" class="headerlink" title="2、安装Hexo"></a>2、安装Hexo</h1><p>npm是随同NodeJS一起安装的包管理工具，安装完Node.js后，可以发现同时npm工具也同时安装好了。</p>
 <ol>
 <li>进入存放博客文件的文件夹下。  </li>
@@ -297,10 +299,14 @@
 </li>
 </ol>
 <h1 id="3、下载安装Git"><a href="#3、下载安装Git" class="headerlink" title="3、下载安装Git"></a>3、下载安装Git</h1><p>下载地址：<em><a href="https://git-scm.com/download/" target="_blank" rel="noopener">https://git-scm.com/download/</a></em>    </p>
-<p>命令提示符中输入“path”命令，可以看到：<br><img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/git_path.png" alt="Git_path" title="git_path"><br>命令提示符中输入git version，查看安装好的版本。<br><img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/git_version.png" alt="Git_version" title="git_version"> </p>
+<p>命令提示符中输入“path”命令，可以看到：<br><img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/git_path.png" alt="Git_path" title="git_path"> </p>
+<p>命令提示符中输入git version，查看安装好的版本。<br><img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/git_version.png" alt="Git_version" title="git_version"> </p>
 <h1 id="4、Github-Pages设置"><a href="#4、Github-Pages设置" class="headerlink" title="4、Github Pages设置"></a>4、Github Pages设置</h1><p>GitHub Pages 是托管在GitHub的项目，可以通过 <em><a href="http://username.github.io" target="_blank" rel="noopener">http://username.github.io</a></em> 来访问托管在Github个人主页，前提是仓库的名字必须是 <em>username.github.io</em> ，每个账户只能有一个这样的仓库来托管主页。</p>
 <ol>
-<li><p>GitHub上建立专门存放主页的仓库<br> 通过new repository新增一个仓库。<br> <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/create_new_repository.png" alt="新增Github仓库" title="新增Github仓库"><br> 在Setting中，以 <em>username.github.io</em> 的形式命名新建的仓库。<br> <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/github_setting.png" alt="新增Github仓库Setting配置" title="新增Github仓库Setting配置"><br> 注意GitHub Pages的Source中选中master branch。<br> <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/github_setting_pages.png" alt="新增Github仓库GitHubPagesg配置" title="新增Github仓库GitHubPages配置"><br> 这样通过 <em><a href="https://ivan4412.github.io/" target="_blank" rel="noopener">https://ivan4412.github.io/</a></em> ，就可以访问github新建的主页了。<br> <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/github__pages_demo.png" alt="GitHubPagesg_DEMO" title="GitHubPagesg_DEMO"></p>
+<li><p>GitHub上建立专门存放主页的仓库<br> 通过new repository新增一个仓库。<br> <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/create_new_repository.png" alt="新增Github仓库" title="新增Github仓库"> </p>
+<p> 在Setting中，以 <em>username.github.io</em> 的形式命名新建的仓库。<br> <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/github_setting.png" alt="新增Github仓库Setting配置" title="新增Github仓库Setting配置"> </p>
+<p> 注意GitHub Pages的Source中选中master branch。<br> <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/github_setting_pages.png" alt="新增Github仓库GitHubPagesg配置" title="新增Github仓库GitHubPages配置"></p>
+<p> 这样通过 <em><a href="https://ivan4412.github.io/">https://ivan4412.github.io/</a></em> ，就可以访问github新建的主页了。<br> <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/github__pages_demo.png" alt="GitHubPagesg_DEMO" title="GitHubPagesg_DEMO"></p>
 </li>
 <li><p>部署Hexo到Github Pages<br>通过之前的步骤，我们已经启用了github上的个人主页，但是这并不是我们所需要的。接下来，我们需要通过hexo generate命令 成一个静态网站，并将这个静态网站，部署到github上。</p>
 <p> 2.1. 修改配置文件blog/_config.yml，找到deploy项，修改如下内容:  </p>
@@ -350,7 +356,7 @@ Enter same passphrase again:&lt;再次输入加密串&gt;
 <li><p>将SSH Key 添加到 GitHub<br> 打开本地 id_rsa.pub 文件，将其内容拷贝到GitHub的Deploy Keys中（路径为：Settings/DeployKeys,注意勾选Allow write access）<br> <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/ssh_deploy_keys.png" alt="将SSHKey添加到GitHub" title="将SSHKey添加到GitHub"><br> 使用SSH命令，验证是否链接到了github:  </p>
 <pre><code>ssh -T git@github.com 
 </code></pre><p><img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/ssh-t_github.png" alt="验证是否链接到了github" title="验证是否链接到了github"><br>再次部署，运行hexo deploy  </p>
-<p>访问 <em><a href="https://ivan4412.github.io/" target="_blank" rel="noopener">https://ivan4412.github.io/</a></em>，就可以看到部署到Github中的个人主页。<br><img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/github_demo.png" alt="ivan4412_demo" title="ivan4412_demo"></p>
+<p>访问 <em><a href="https://ivan4412.github.io/">https://ivan4412.github.io/</a></em>，就可以看到部署到Github中的个人主页。<br><img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/github_demo.png" alt="ivan4412_demo" title="ivan4412_demo"></p>
 </li>
 </ol>
 </li>
@@ -396,7 +402,7 @@ Enter same passphrase again:&lt;再次输入加密串&gt;
 
 <!--begin footer-->
 <footer id="footer" class="footer animated fadeInUp hide">
-    <p><i class="copy">&copy;</i> 2018 <a href="http://yoursite.com">Ivan Yang</a> All Right Reserved.</p>
+    <p><i class="copy">&copy;</i> 2018 <a href="https://ivan4412.github.io">Ivan Yang</a> All Right Reserved.</p>
     <p>Powered by <a href="http://hexo.io">Hexo</a>. Theme by <a href="https://github.com/objectyan/hexo-theme-hannah">hannah</a></p>
 </footer>
 <!--end footer-->
