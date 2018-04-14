@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ivan4412.github.io/"/>
-  <updated>2018-04-14T12:40:15.230Z</updated>
+  <updated>2018-04-14T13:23:37.912Z</updated>
   <id>https://ivan4412.github.io/</id>
   
   <author>
@@ -21,18 +21,18 @@
     <link href="https://ivan4412.github.io/2018/04/14/Java%E7%9F%A5%E8%AF%86%E7%82%B9%E5%A4%8D%E4%B9%A0/"/>
     <id>https://ivan4412.github.io/2018/04/14/Java知识点复习/</id>
     <published>2018-04-14T12:36:46.000Z</published>
-    <updated>2018-04-14T12:40:15.230Z</updated>
+    <updated>2018-04-14T13:23:37.912Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="一、面向对象"><a href="#一、面向对象" class="headerlink" title="一、面向对象"></a>一、面向对象</h1><ol><li><p>面向对象的特征是什么？<br>（封装、继承、多态）  </p></li><li><p>继承和组合的区别是什么？什么时候应该用继承、什么时候应该用组合？<br>（is-a/has-a）（除非需要向上转型，多用组合，少用继承）    </p></li><li><p>Java实现多态的机制是什么？<br>（父类的引用变量指向子类的实例对象，动态绑定）</p></li><li><p>final关键字的用途？    </p><ul><li>变量（基本数据类型值不变，对象引用类型引用不变值可变）</li><li>方法（不可覆盖）</li><li>类（不可继承））  </li></ul></li><li><p>class程序代码的装载时机？<br>（初始被使用时才被转载（初次包括静态变量和方法使用的时候，可在new之前））  </p></li><li><p>为什么要使用内部类，有哪些内部类？他们有什么特点？<br>（对外部隐藏、更好封装性，静态内部类（只能访问外部类的静态成员和方法）、成员内部类（需要外部类对象实例才能调用）、方法内部类（可以访问的final定义的方法局部表里）、匿名内部类（只能创建一个对象，无构造函数）  </p></li><li><p>HashMap的实现原理？equals()和hashcode()的联系？<br>（数组+链表，key值的hashcode()存数组，通过equals()线性比较）  </p></li></ol><ol start="8"><li><p>HashMap和HashTable的区别？ </p><ul><li>HashTable：方法同步，不允许null值，使用Enumeration进行遍历，hashs数组默认11，增长方式old*2+1，直接使用对象哈希值;</li><li>HashMap:方法不同步，允许null值，使用Iterator遍历，hash数组默认16，重新计算哈希值）</li></ul></li><li><p>什么是Java反射，有什么作用，有何优点缺点，实际有什么应用？<br>（运行时确定是哪个类，判断对象所属类；动态实例化类对象；动态获得属性方法／调用属性方法，动态创建和编译对象／java多态性；影响一定性能。Java数据库操作/动态代理/Spring ioc/AOP） </p></li></ol><h2 id="1-面向对象的特征"><a href="#1-面向对象的特征" class="headerlink" title="1. 面向对象的特征"></a>1. 面向对象的特征</h2><p><img src="http://p746lkse7.bkt.clouddn.com/Java%E7%9F%A5%E8%AF%86%E7%82%B9%E5%A4%8D%E4%B9%A0/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81.PNG" alt="&quot;面向对象的特征&quot;" title="面向对象的特征"></p><h2 id="2-继承和组合"><a href="#2-继承和组合" class="headerlink" title="2.继承和组合"></a>2.继承和组合</h2><p>参考：<a href="http://www.hollischuang.com/archives/1319" title="继承和组合" target="_blank" rel="noopener">http://www.hollischuang.com/archives/1319</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="一、面向对象"><a href="#一、面向对象" class="headerlink" title="一、面向对象"></a>一、面向对象</h1><ol><li><p>面向对象的特征是什么？  </p><blockquote><p>（封装、继承、多态）  </p></blockquote></li><li><p>继承和组合的区别是什么？什么时候应该用继承、什么时候应该用组合？  </p><blockquote><p>（is-a/has-a）（除非需要向上转型，多用组合，少用继承）    </p></blockquote></li><li><p>Java实现多态的机制是什么？  </p><blockquote><p>（父类的引用变量指向子类的实例对象，动态绑定）</p></blockquote></li><li><p>final关键字的用途？    </p><blockquote><ul><li>变量（基本数据类型值不变，对象引用类型引用不变值可变）</li><li>方法（不可覆盖）</li><li>类（不可继承））  </li></ul></blockquote></li><li><p>class程序代码的装载时机？    </p><blockquote><p>（初始被使用时才被转载（初次包括静态变量和方法使用的时候，可在new之前））  </p></blockquote></li><li><p>为什么要使用内部类，有哪些内部类？他们有什么特点？   </p><blockquote><p>（对外部隐藏、更好封装性，静态内部类（只能访问外部类的静态成员和方法）、成员内部类（需要外部类对象实例才能调用）、方法内部类（可以访问的final定义的方法局部表里）、匿名内部类（只能创建一个对象，无构造函数）  </p></blockquote></li><li><p>HashMap的实现原理？equals()和hashcode()的联系？   </p><blockquote><p>（数组+链表，key值的hashcode()存数组，通过equals()线性比较）  </p></blockquote></li></ol><ol start="8"><li><p>HashMap和HashTable的区别？ </p><ul><li>HashTable：方法同步，不允许null值，使用Enumeration进行遍历，hashs数组默认11，增长方式old*2+1，直接使用对象哈希值;</li><li>HashMap:方法不同步，允许null值，使用Iterator遍历，hash数组默认16，重新计算哈希值）</li></ul></li><li><p>什么是Java反射，有什么作用，有何优点缺点，实际有什么应用？<br>（运行时确定是哪个类，判断对象所属类；动态实例化类对象；动态获得属性方法／调用属性方法，动态创建和编译对象／java多态性；影响一定性能。Java数据库操作/动态代理/Spring ioc/AOP） </p></li></ol><h2 id="1-面向对象的特征"><a href="#1-面向对象的特征" class="headerlink" title="1. 面向对象的特征"></a>1. 面向对象的特征</h2><p><img src="http://p746lkse7.bkt.clouddn.com/Java%E7%9F%A5%E8%AF%86%E7%82%B9%E5%A4%8D%E4%B9%A0/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81.PNG" alt="&quot;面向对象的特征&quot;" title="面向对象的特征"></p><h2 id="2-继承和组合"><a href="#2-继承和组合" class="headerlink" title="2.继承和组合"></a>2.继承和组合</h2><p>参考：<a href="http://www.hollischuang.com/archives/1319" title="继承和组合" target="_blank" rel="noopener">http://www.hollischuang.com/archives/1319</a></p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;h1 id=&quot;一、面向对象&quot;&gt;&lt;a href=&quot;#一、面向对象&quot; class=&quot;headerlink&quot; title=&quot;一、面向对象&quot;&gt;&lt;/a&gt;一、面向对象&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;面向对象的特征是什么？&lt;br&gt;（封装、继承、多态）  &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;
+&lt;li&gt;&lt;p&gt;面向对象的特征是什么？  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;（封装、继承、多态） 
       
     
     </summary>
