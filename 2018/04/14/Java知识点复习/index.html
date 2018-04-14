@@ -9,7 +9,7 @@
 
 <title>
     
-    Hexo + Github Pages搭建个人博客 |
+    Java知识点复习 |
     
     Ivan&#39;s Blog</title>
 <!--end title-->
@@ -217,14 +217,14 @@
     <ul class="bread-crumb-menu animated rubberBand">
         <li><a href="/"><i class="fh fh-ravelry" aria-hidden="true"></i> Home</a></li>
         
-        <li><a href="/categories/Hexo/"><i class="fh fh-cube" aria-hidden="true"></i> Hexo</a>
+        <li><a href="/categories/Java/"><i class="fh fh-cube" aria-hidden="true"></i> Java</a>
         </li>
         
         <li>
             
             <i class="fh fh-newspaper-o" aria-hidden="true"></i>
             
-            Hexo + Github Pages搭建个人博客
+            Java知识点复习
         </li>
         
     </ul>
@@ -241,19 +241,19 @@
 </div>
         <!--end breadcrumb-->
         <article class="post animated rollIn">
-    <h1 class="post-title">Hexo + Github Pages搭建个人博客</h1>
+    <h1 class="post-title">Java知识点复习</h1>
     <div class="post-subtitle">
         
-        <time datetime="2018-04-02T03:25:59.000Z" class="item">
-            <i class="fh fh-calendar" aria-hidden="true"></i>&nbsp;&nbsp;2018-04-02
+        <time datetime="2018-04-14T12:36:46.000Z" class="item">
+            <i class="fh fh-calendar" aria-hidden="true"></i>&nbsp;&nbsp;2018-04-14
         </time>
         
         
         <span class="item">
       <i class="fh fh-cubes" aria-hidden="true"></i>&nbsp;
             
-            <a class="label label-primary tags" href="/categories/Hexo/">
-           <i class="fh fh-cube" aria-hidden="true"></i>&nbsp;Hexo
+            <a class="label label-primary tags" href="/categories/Java/">
+           <i class="fh fh-cube" aria-hidden="true"></i>&nbsp;Java
         </a>
             
         </span>
@@ -262,126 +262,72 @@
         <span class="item">
         <i class="fh fh-tags" aria-hidden="true"></i>&nbsp;
             
-            <a class="label label-info tags" href="/tags/Hexo/">
-            <i class="fh fh-tag" aria-hidden="true"></i>&nbsp;Hexo
+            <a class="label label-info tags" href="/tags/Java/">
+            <i class="fh fh-tag" aria-hidden="true"></i>&nbsp;Java
             </a>
             
-            <a class="label label-info tags" href="/tags/Github-Pages/">
-            <i class="fh fh-tag" aria-hidden="true"></i>&nbsp;Github Pages
+            <a class="label label-info tags" href="/tags/面向对象/">
+            <i class="fh fh-tag" aria-hidden="true"></i>&nbsp;面向对象
             </a>
             
         </span>
         
     </div>
     
-    <h1 id="1、下载安装-Node-js"><a href="#1、下载安装-Node-js" class="headerlink" title="1、下载安装 Node.js"></a>1、下载安装 Node.js</h1><p>下载地址：<em><a href="https://nodejs.org/download/" target="_blank" rel="noopener">https://nodejs.org/download/</a></em>  </p>
-<p>进入release文件夹下载最近版本安装。<br>    <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/downNodejs.jpg" alt="下载安装Nodejs" title="下载安装Node.js"><br>安装完成后，在cmd中输入”path”命令，可查看当前系统环境变量配置情况。其中可以看到nodejs已经配置好。<br>    <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/nodejs_path.png" alt="下载安装Nodejs输入path命令" title="下载安装Node.js"><br>输入node -v，可查看当前版本。<br>    <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/nodejs_version.png" alt="下载安装Nodejs输入node-v" title="下载安装Node.js"></p>
-<h1 id="2、安装Hexo"><a href="#2、安装Hexo" class="headerlink" title="2、安装Hexo"></a>2、安装Hexo</h1><p>npm是随同NodeJS一起安装的包管理工具，安装完Node.js后，可以发现同时npm工具也同时安装好了。</p>
-<ol>
-<li>进入存放博客文件的文件夹下。  </li>
-<li><p>安装hexo命令:  </p>
-<pre><code>npm install hexo-cli -g  
-</code></pre><p> 输入：hexo -v后，可以看到hexo命令安装完成。</p>
+    <h1 id="一、面向对象"><a href="#一、面向对象" class="headerlink" title="一、面向对象"></a>一、面向对象</h1><ol>
+<li><p>面向对象的特征是什么？<br>（封装、继承、多态）  </p>
 </li>
-<li><p>初始化hexo :   </p>
-<pre><code>init blog
-</code></pre></li>
-<li><p>进入blog文件夹后安装hexo的扩展插件：  </p>
-<pre><code>npm install
-</code></pre></li>
-<li><p>生成网站静态文件：</p>
-<pre><code>hexo g # 或者hexo generate
-</code></pre></li>
-<li><p>启动hexo本地web服务：  </p>
-<pre><code>hexo s # 或者hexo server
-</code></pre></li>
-<li><p>启动服务后，可以在 <em><a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></em> 查看内置生成的博客。<br><img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/hexo_localhost_demo.png" alt="hexo内置生成的博客" title="Hexo内置博客"></p>
+<li><p>继承和组合的区别是什么？什么时候应该用继承、什么时候应该用组合？<br>（is-a/has-a）（除非需要向上转型，多用组合，少用继承）    </p>
 </li>
-</ol>
-<h1 id="3、下载安装Git"><a href="#3、下载安装Git" class="headerlink" title="3、下载安装Git"></a>3、下载安装Git</h1><p>下载地址：<em><a href="https://git-scm.com/download/" target="_blank" rel="noopener">https://git-scm.com/download/</a></em>    </p>
-<p>命令提示符中输入“path”命令，可以看到：<br><img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/git_path.png" alt="Git_path" title="git_path"> </p>
-<p>命令提示符中输入git version，查看安装好的版本。<br><img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/git_version.png" alt="Git_version" title="git_version"> </p>
-<h1 id="4、Github-Pages设置"><a href="#4、Github-Pages设置" class="headerlink" title="4、Github Pages设置"></a>4、Github Pages设置</h1><p>GitHub Pages 是托管在GitHub的项目，可以通过 <em><a href="http://username.github.io" target="_blank" rel="noopener">http://username.github.io</a></em> 来访问托管在Github个人主页，前提是仓库的名字必须是 <em>username.github.io</em> ，每个账户只能有一个这样的仓库来托管主页。</p>
-<ol>
-<li><p>GitHub上建立专门存放主页的仓库<br> 通过new repository新增一个仓库。<br> <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/create_new_repository.png" alt="新增Github仓库" title="新增Github仓库">  </p>
-<p> 在Setting中，以 <em>username.github.io</em> 的形式命名新建的仓库。<br> <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/github_setting.png" alt="新增Github仓库Setting配置" title="新增Github仓库Setting配置"> </p>
-<p> 注意GitHub Pages的Source中选中master branch。<br> <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/github_setting_pages.png" alt="新增Github仓库GitHubPagesg配置" title="新增Github仓库GitHubPages配置"></p>
-<p> 这样通过 <em><a href="https://ivan4412.github.io/">https://ivan4412.github.io/</a></em> ，就可以访问github新建的主页了。<br> <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/github__pages_demo.png" alt="GitHubPagesg_DEMO" title="GitHubPagesg_DEMO"></p>
+<li><p>Java实现多态的机制是什么？<br>（父类的引用变量指向子类的实例对象，动态绑定）</p>
 </li>
-<li><p>部署Hexo到Github Pages<br>通过之前的步骤，我们已经启用了github上的个人主页，但是这并不是我们所需要的。接下来，我们需要通过hexo generate命令 成一个静态网站，并将这个静态网站，部署到github上。</p>
-<p> 2.1. 修改配置文件blog/_config.yml，找到deploy项，修改如下内容:  </p>
-<pre><code># Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  # 类型
-  type: git
-  # 仓库
-  repo: git@github.com:Ivan4412/Ivan4412.github.io.git
-  # 分支
-  branch: master
-</code></pre><p> 注意：各项冒号后面需紧接着一个空格。</p>
-<p> 2.2. 部署hexo  </p>
-<pre><code>通过hexo命令部署hexo到GitHub中:  
-
-# 清空静态页面
-hexo clean #（或hexo c）
-# 生成静态页面
-hexo generate #（或hexo g）
-# 部署 
-hexo deploy #（或hexod ）
-</code></pre></li>
-</ol>
-<h1 id="5-问题"><a href="#5-问题" class="headerlink" title="5. 问题"></a>5. 问题</h1><ul>
-<li><p>问题1：如果此时产生 ERROR Deployer not found: git错误。</p>
-<p> 这是由于hexo缺少git扩展的拓展插件，执行如下命令安装即可：  </p>
-<pre><code>npm install --save hexo-deployer-git
-</code></pre></li>
-</ul>
+<li><p>final关键字的用途？    </p>
 <ul>
-<li><p>问题2：执行hexo deploy，报错：  </p>
-<pre><code>Error: Host key verification failed.
-fatal: Could not read from remote repository.
-Please make sure you have the correct access rightsand the repository exists.
-</code></pre><p>  使用git协议提交项目，需要配置相应的密钥对。首先需生成本地密钥对 ，然后将对应的公钥设置到远程远程仓库上。 </p>
-<ol>
-<li><p>生成SSH-Key  </p>
-<p> 进入Git安装目录下，找到git-bash.exe,执行如下命令：  </p>
-<pre><code>git config --global user.name &quot;用户名称&quot;
-git config --global user.email &quot;邮件地址@youremail.com &quot;
-ssh-keygen -t rsa -C 邮件地址@youremail.com
-</code></pre><p> 按提示生成SSH key，期间会要求输入密码，这个密码会在提交项目时用到，主要是防止别人随意提交项目内容。或者也可以不输入，这样就下次提交时就可以直接提交。<br> <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/ssh-keygen.png" alt="SSH-keygen" title="SSH-keygen"></p>
-<pre><code>Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;
-Enter same passphrase again:&lt;再次输入加密串&gt;
-</code></pre></li>
-<li><p>将SSH Key 添加到 GitHub<br> 打开本地 id_rsa.pub 文件，将其内容拷贝到GitHub的Deploy Keys中（路径为：Settings/DeployKeys,注意勾选Allow write access）<br> <img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/ssh_deploy_keys.png" alt="将SSHKey添加到GitHub" title="将SSHKey添加到GitHub"><br> 使用SSH命令，验证是否链接到了github:  </p>
-<pre><code>ssh -T git@github.com 
-</code></pre><p><img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/ssh-t_github.png" alt="验证是否链接到了github" title="验证是否链接到了github"><br>再次部署，运行hexo deploy  </p>
-<p>访问 <em><a href="https://ivan4412.github.io/">https://ivan4412.github.io/</a></em>，就可以看到部署到Github中的个人主页。<br><img src="http://p746lkse7.bkt.clouddn.com/Hexo_Github_Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/github_demo.png" alt="ivan4412_demo" title="ivan4412_demo"></p>
+<li>变量（基本数据类型值不变，对象引用类型引用不变值可变）</li>
+<li>方法（不可覆盖）</li>
+<li>类（不可继承））  </li>
+</ul>
+</li>
+<li><p>class程序代码的装载时机？<br>（初始被使用时才被转载（初次包括静态变量和方法使用的时候，可在new之前））  </p>
+</li>
+<li><p>为什么要使用内部类，有哪些内部类？他们有什么特点？<br>（对外部隐藏、更好封装性，静态内部类（只能访问外部类的静态成员和方法）、成员内部类（需要外部类对象实例才能调用）、方法内部类（可以访问的final定义的方法局部表里）、匿名内部类（只能创建一个对象，无构造函数）  </p>
+</li>
+<li><p>HashMap的实现原理？equals()和hashcode()的联系？<br>（数组+链表，key值的hashcode()存数组，通过equals()线性比较）  </p>
 </li>
 </ol>
-</li>
+<ol start="8">
+<li><p>HashMap和HashTable的区别？ </p>
+<ul>
+<li>HashTable：方法同步，不允许null值，使用Enumeration进行遍历，hashs数组默认11，增长方式old*2+1，直接使用对象哈希值;</li>
+<li>HashMap:方法不同步，允许null值，使用Iterator遍历，hash数组默认16，重新计算哈希值）</li>
 </ul>
+</li>
+<li><p>什么是Java反射，有什么作用，有何优点缺点，实际有什么应用？<br>（运行时确定是哪个类，判断对象所属类；动态实例化类对象；动态获得属性方法／调用属性方法，动态创建和编译对象／java多态性；影响一定性能。Java数据库操作/动态代理/Spring ioc/AOP） </p>
+</li>
+</ol>
+<h2 id="1-面向对象的特征"><a href="#1-面向对象的特征" class="headerlink" title="1. 面向对象的特征"></a>1. 面向对象的特征</h2><p><img src="http://p746lkse7.bkt.clouddn.com/Java%E7%9F%A5%E8%AF%86%E7%82%B9%E5%A4%8D%E4%B9%A0/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81.PNG" alt="&quot;面向对象的特征&quot;" title="面向对象的特征"></p>
+<h2 id="2-继承和组合"><a href="#2-继承和组合" class="headerlink" title="2.继承和组合"></a>2.继承和组合</h2><p>参考：<a href="http://www.hollischuang.com/archives/1319" title="继承和组合" target="_blank" rel="noopener">http://www.hollischuang.com/archives/1319</a></p>
 
 </article>
-<ol class="animated rollIn hannah-toc"><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#1、下载安装-Node-js"><span class="animated rollIn hannah-toc-text">1、下载安装 Node.js</span></a></li><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#2、安装Hexo"><span class="animated rollIn hannah-toc-text">2、安装Hexo</span></a></li><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#3、下载安装Git"><span class="animated rollIn hannah-toc-text">3、下载安装Git</span></a></li><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#4、Github-Pages设置"><span class="animated rollIn hannah-toc-text">4、Github Pages设置</span></a></li><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#5-问题"><span class="animated rollIn hannah-toc-text">5. 问题</span></a></li></ol>
+<ol class="animated rollIn hannah-toc"><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#一、面向对象"><span class="animated rollIn hannah-toc-text">一、面向对象</span></a><ol class="animated rollIn hannah-toc-child"><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-2"><a class="animated rollIn hannah-toc-link" href="#1-面向对象的特征"><span class="animated rollIn hannah-toc-text">1. 面向对象的特征</span></a></li><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-2"><a class="animated rollIn hannah-toc-link" href="#2-继承和组合"><span class="animated rollIn hannah-toc-text">2.继承和组合</span></a></li></ol></li></ol>
 <div class="animated bounceInDown paginations">
     <div class="col-md-8 col-md-push-2 col-xs-12">
         <nav>
             
-            <a href="/2018/04/02/Markdown使用入门/" class="prev col-md-2 col-xs-4 text-left">&larr; Prev</a>
-            
-            <span class="page-content col-md-8  col-xs-4 text-center">
+            <span class="page-content col-md-8 col-md-offset-2 col-xs-offset-4 col-xs-4 text-center">
                 
             </span>
+            
+            <a href="/2018/04/02/Markdown使用入门/" class="next col-md-2 col-xs-4 text-right">Next &rarr;</a>
             
         </nav>
         <div>
             <div class="col-md-6 col-xs-6 text-left">
                 
-                Markdown使用入门
-                
             </div>
             <div class="col-md-6 col-xs-6 text-right">
+                
+                Markdown使用入门
                 
             </div>
         </div>
