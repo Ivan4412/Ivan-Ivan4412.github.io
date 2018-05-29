@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ivan4412.github.io/"/>
-  <updated>2018-05-29T12:38:12.919Z</updated>
+  <updated>2018-05-29T12:39:54.520Z</updated>
   <id>https://ivan4412.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://ivan4412.github.io/2018/05/29/Swagger2%E6%9E%84%E5%BB%BARESTful-API%E6%96%87%E6%A1%A3/"/>
     <id>https://ivan4412.github.io/2018/05/29/Swagger2构建RESTful-API文档/</id>
     <published>2018-05-29T12:35:29.000Z</published>
-    <updated>2018-05-29T12:38:12.919Z</updated>
+    <updated>2018-05-29T12:39:54.520Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Swagger2构建RESTful-API文档"><a href="#Swagger2构建RESTful-API文档" class="headerlink" title="Swagger2构建RESTful API文档"></a>Swagger2构建RESTful API文档</h1><ol><li><p>添加依赖  </p><pre><code>&lt;dependency&gt;    &lt;groupId&gt;io.springfox&lt;/groupId&gt;    &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;    &lt;version&gt;2.2.2&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt;    &lt;groupId&gt;io.springfox&lt;/groupId&gt;    &lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt;    &lt;version&gt;2.2.2&lt;/version&gt;&lt;/dependency&gt;</code></pre></li><li><p>在Application.java同级创建Swagger2的配置类Swagger2  </p><pre><code>@Configuration@EnableSwagger2public class Swagger2 {    @Bean    public Docket createRestApi() {        return new Docket(DocumentationType.SWAGGER_2)                .apiInfo(apiInfo())                .select()                  .apis(RequestHandlerSelectors.basePackage(&quot;com.didispace.web&quot;)) //扫描该包下所有Controller定义的API                 .paths(PathSelectors.any())                .build();    }    private ApiInfo apiInfo() {        return new ApiInfoBuilder()                .title(&quot;Spring Boot中使用Swagger2构建RESTful APIs&quot;)                .description(&quot;更多Spring Boot相关文章请关注：http://blog.didispace.com/&quot;)                .termsOfServiceUrl(&quot;http://blog.didispace.com/&quot;)                .contact(&quot;程序猿DD&quot;)                .version(&quot;1.0&quot;)                .build();    }}</code></pre></li><li><p>在Controller的方法中使用@ApiOperation、@ApiImplicitParams、@ApiImplicitParam注解来增加API说明  </p><pre><code>@ApiOperation(value=&quot;更新用户详细信息&quot;, notes=&quot;根据url的id来指定更新对象，并根据传过来的user信息来更新用户详细信息&quot;)@ApiImplicitParams({        @ApiImplicitParam(name = &quot;id&quot;, value = &quot;用户ID&quot;, required = true, dataType = &quot;Long&quot;),        @ApiImplicitParam(name = &quot;user&quot;, value = &quot;用户详细实体user&quot;, required = true, dataType = &quot;User&quot;)})@RequestMapping(value=&quot;/{id}&quot;, method=RequestMethod.PUT)public String putUser(@PathVariable Long id, @RequestBody User user) {    User u = users.get(id);    u.setName(user.getName());    u.setAge(user.getAge());    users.put(id, u);    return &quot;success&quot;;}</code></pre></li><li>启动Spring Boot程序，访问：<a href="http://localhost:8080/swagger-ui.html" target="_blank" rel="noopener">http://localhost:8080/swagger-ui.html</a></li></ol>]]></content>
     
@@ -37,11 +37,11 @@
       <category term="Spring" scheme="https://ivan4412.github.io/categories/Spring/"/>
     
     
+      <category term="SpringBoot" scheme="https://ivan4412.github.io/tags/SpringBoot/"/>
+    
       <category term="Swagger2" scheme="https://ivan4412.github.io/tags/Swagger2/"/>
     
       <category term="RESTful" scheme="https://ivan4412.github.io/tags/RESTful/"/>
-    
-      <category term="SpringBoot" scheme="https://ivan4412.github.io/tags/SpringBoot/"/>
     
   </entry>
   
@@ -66,9 +66,9 @@
       <category term="Spring" scheme="https://ivan4412.github.io/categories/Spring/"/>
     
     
-      <category term="SpringBoot" scheme="https://ivan4412.github.io/tags/SpringBoot/"/>
-    
       <category term="Maven" scheme="https://ivan4412.github.io/tags/Maven/"/>
+    
+      <category term="SpringBoot" scheme="https://ivan4412.github.io/tags/SpringBoot/"/>
     
   </entry>
   
