@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ivan4412.github.io/"/>
-  <updated>2018-05-29T12:30:09.330Z</updated>
+  <updated>2018-05-29T12:36:27.868Z</updated>
   <id>https://ivan4412.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Swagger2����RESTful API�ĵ�</title>
+    <link href="https://ivan4412.github.io/2018/05/29/Swagger2%E6%9E%84%E5%BB%BARESTful-API%E6%96%87%E6%A1%A3/"/>
+    <id>https://ivan4412.github.io/2018/05/29/Swagger2构建RESTful-API文档/</id>
+    <published>2018-05-29T12:35:29.000Z</published>
+    <updated>2018-05-29T12:36:27.868Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Swagger2����RESTful-API�j�"><a href="#Swagger2����RESTful-API�j�" class="headerlink" title="Swagger2����RESTful API�ĵ�"></a>Swagger2����RESTful API�ĵ�</h1><ol><li><p>�������  </p><pre><code>&lt;dependency&gt;    &lt;groupId&gt;io.springfox&lt;/groupId&gt;    &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;    &lt;version&gt;2.2.2&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt;    &lt;groupId&gt;io.springfox&lt;/groupId&gt;    &lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt;    &lt;version&gt;2.2.2&lt;/version&gt;&lt;/dependency&gt;</code></pre></li><li><p>��Application.javaͬ������Swagger2��������Swagger2  </p><pre><code>@Configuration@EnableSwagger2public class Swagger2 {    @Bean    public Docket createRestApi() {        return new Docket(DocumentationType.SWAGGER_2)                .apiInfo(apiInfo())                .select()                  .apis(RequestHandlerSelectors.basePackage(&quot;com.didispace.web&quot;)) //ɨ��ð�������Controller�����API                 .paths(PathSelectors.any())                .build();    }    private ApiInfo apiInfo() {        return new ApiInfoBuilder()                .title(&quot;Spring Boot��ʹ��Swagger2����RESTful APIs&quot;)                .description(&quot;����Spring Boot����������ע��http://blog.didispace.com/&quot;)                .termsOfServiceUrl(&quot;http://blog.didispace.com/&quot;)                .contact(&quot;����ԳDD&quot;)                .version(&quot;1.0&quot;)                .build();    }}</code></pre></li><li><p>��Controller�ķ�����ʹ��@ApiOperation��@ApiImplicitParams��@ApiImplicitParamע��������API˵��  </p><pre><code>@ApiOperation(value=&quot;�����û���ϸ��Ϣ&quot;, notes=&quot;����url��id��ָ�����¶��󣬲����ݴ�������user��Ϣ�������û���ϸ��Ϣ&quot;)@ApiImplicitParams({        @ApiImplicitParam(name = &quot;id&quot;, value = &quot;�û�ID&quot;, required = true, dataType = &quot;Long&quot;),        @ApiImplicitParam(name = &quot;user&quot;, value = &quot;�û���ϸʵ��user&quot;, required = true, dataType = &quot;User&quot;)})@RequestMapping(value=&quot;/{id}&quot;, method=RequestMethod.PUT)public String putUser(@PathVariable Long id, @RequestBody User user) {    User u = users.get(id);    u.setName(user.getName());    u.setAge(user.getAge());    users.put(id, u);    return &quot;success&quot;;}</code></pre></li><li>��Spring Boot���򣬷��ʣ�<a href="http://localhost:8080/swagger-ui.html" target="_blank" rel="noopener">http://localhost:8080/swagger-ui.html</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Swagger2����RESTful-API�j�&quot;&gt;&lt;a href=&quot;#Swagger2����RESTful-API�j�&quot; class=&quot;headerlink&quot; title=&quot;Swagger2����RESTful API�ĵ�&quot;&gt;&lt;/a&gt;Swagger2
+      
+    
+    </summary>
+    
+      <category term="Spring" scheme="https://ivan4412.github.io/categories/Spring/"/>
+    
+    
+      <category term="Swagger2" scheme="https://ivan4412.github.io/tags/Swagger2/"/>
+    
+      <category term="RESTful" scheme="https://ivan4412.github.io/tags/RESTful/"/>
+    
+      <category term="SpringBoot" scheme="https://ivan4412.github.io/tags/SpringBoot/"/>
+    
+  </entry>
   
   <entry>
     <title>Maven使用总结</title>
@@ -37,9 +66,9 @@
       <category term="Spring" scheme="https://ivan4412.github.io/categories/Spring/"/>
     
     
-      <category term="Maven" scheme="https://ivan4412.github.io/tags/Maven/"/>
-    
       <category term="SpringBoot" scheme="https://ivan4412.github.io/tags/SpringBoot/"/>
+    
+      <category term="Maven" scheme="https://ivan4412.github.io/tags/Maven/"/>
     
   </entry>
   
