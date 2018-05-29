@@ -9,7 +9,7 @@
 
 <title>
     
-    Swagger2����RESTful API�ĵ� |
+    Swagger2构建RESTful API文档 |
     
     Ivan&#39;s Blog</title>
 <!--end title-->
@@ -224,7 +224,7 @@
             
             <i class="fh fh-newspaper-o" aria-hidden="true"></i>
             
-            Swagger2����RESTful API�ĵ�
+            Swagger2构建RESTful API文档
         </li>
         
     </ul>
@@ -234,14 +234,14 @@
     <input placeholder="Search ..." onkeyup="searchFunc(this,event,'/search.xml')"
            class="input-search animated fadeInRight"/>
     <div class="search-result animated fadeInRight">
-        <a class="animated tada col-lg-12 search-result-item result-link" href="/2018/05/29/Swagger2构建RESTful-API文档/">Swagger2����RESTful API�ĵ�</a><a class="animated tada col-lg-12 search-result-item result-link" href="/2018/04/29/Maven使用总结/">Maven使用总结</a><a class="animated tada col-lg-12 search-result-item result-link" href="/2018/04/14/Java知识点复习/">Java知识点复习</a><a class="animated tada col-lg-12 search-result-item result-link" href="/2018/04/02/Markdown使用入门/">Markdown使用入门</a><a class="animated tada col-lg-12 search-result-item result-link" href="/2018/04/02/Hexo-Github-Pages搭建个人博客/">Hexo + Github Pages搭建个人博客</a>
+        <a class="animated tada col-lg-12 search-result-item result-link" href="/2018/05/29/Swagger2构建RESTful-API文档/">Swagger2构建RESTful API文档</a><a class="animated tada col-lg-12 search-result-item result-link" href="/2018/04/29/Maven使用总结/">Maven使用总结</a><a class="animated tada col-lg-12 search-result-item result-link" href="/2018/04/14/Java知识点复习/">Java知识点复习</a><a class="animated tada col-lg-12 search-result-item result-link" href="/2018/04/02/Markdown使用入门/">Markdown使用入门</a><a class="animated tada col-lg-12 search-result-item result-link" href="/2018/04/02/Hexo-Github-Pages搭建个人博客/">Hexo + Github Pages搭建个人博客</a>
     </div>
 </div>
     </div>
 </div>
         <!--end breadcrumb-->
         <article class="post animated rollIn">
-    <h1 class="post-title">Swagger2����RESTful API�ĵ�</h1>
+    <h1 class="post-title">Swagger2构建RESTful API文档</h1>
     <div class="post-subtitle">
         
         <time datetime="2018-05-29T12:35:29.000Z" class="item">
@@ -278,8 +278,8 @@
         
     </div>
     
-    <h1 id="Swagger2����RESTful-API�j�"><a href="#Swagger2����RESTful-API�j�" class="headerlink" title="Swagger2����RESTful API�ĵ�"></a>Swagger2����RESTful API�ĵ�</h1><ol>
-<li><p>�������  </p>
+    <h1 id="Swagger2构建RESTful-API文档"><a href="#Swagger2构建RESTful-API文档" class="headerlink" title="Swagger2构建RESTful API文档"></a>Swagger2构建RESTful API文档</h1><ol>
+<li><p>添加依赖  </p>
 <pre><code>&lt;dependency&gt;
     &lt;groupId&gt;io.springfox&lt;/groupId&gt;
     &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;
@@ -291,7 +291,7 @@
     &lt;version&gt;2.2.2&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre></li>
-<li><p>��Application.javaͬ������Swagger2��������Swagger2  </p>
+<li><p>在Application.java同级创建Swagger2的配置类Swagger2  </p>
 <pre><code>@Configuration
 @EnableSwagger2
 public class Swagger2 {
@@ -300,27 +300,27 @@ public class Swagger2 {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()  
-                .apis(RequestHandlerSelectors.basePackage(&quot;com.didispace.web&quot;)) //ɨ��ð�������Controller�����API 
+                .apis(RequestHandlerSelectors.basePackage(&quot;com.didispace.web&quot;)) //扫描该包下所有Controller定义的API 
                 .paths(PathSelectors.any())
                 .build();
     }
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title(&quot;Spring Boot��ʹ��Swagger2����RESTful APIs&quot;)
-                .description(&quot;����Spring Boot����������ע��http://blog.didispace.com/&quot;)
+                .title(&quot;Spring Boot中使用Swagger2构建RESTful APIs&quot;)
+                .description(&quot;更多Spring Boot相关文章请关注：http://blog.didispace.com/&quot;)
                 .termsOfServiceUrl(&quot;http://blog.didispace.com/&quot;)
-                .contact(&quot;����ԳDD&quot;)
+                .contact(&quot;程序猿DD&quot;)
                 .version(&quot;1.0&quot;)
                 .build();
     }
 
 }
 </code></pre></li>
-<li><p>��Controller�ķ�����ʹ��@ApiOperation��@ApiImplicitParams��@ApiImplicitParamע��������API˵��  </p>
-<pre><code>@ApiOperation(value=&quot;�����û���ϸ��Ϣ&quot;, notes=&quot;����url��id��ָ�����¶��󣬲����ݴ�������user��Ϣ�������û���ϸ��Ϣ&quot;)
+<li><p>在Controller的方法中使用@ApiOperation、@ApiImplicitParams、@ApiImplicitParam注解来增加API说明  </p>
+<pre><code>@ApiOperation(value=&quot;更新用户详细信息&quot;, notes=&quot;根据url的id来指定更新对象，并根据传过来的user信息来更新用户详细信息&quot;)
 @ApiImplicitParams({
-        @ApiImplicitParam(name = &quot;id&quot;, value = &quot;�û�ID&quot;, required = true, dataType = &quot;Long&quot;),
-        @ApiImplicitParam(name = &quot;user&quot;, value = &quot;�û���ϸʵ��user&quot;, required = true, dataType = &quot;User&quot;)
+        @ApiImplicitParam(name = &quot;id&quot;, value = &quot;用户ID&quot;, required = true, dataType = &quot;Long&quot;),
+        @ApiImplicitParam(name = &quot;user&quot;, value = &quot;用户详细实体user&quot;, required = true, dataType = &quot;User&quot;)
 })
 @RequestMapping(value=&quot;/{id}&quot;, method=RequestMethod.PUT)
 public String putUser(@PathVariable Long id, @RequestBody User user) {
@@ -331,11 +331,11 @@ public String putUser(@PathVariable Long id, @RequestBody User user) {
     return &quot;success&quot;;
 }
 </code></pre></li>
-<li>��Spring Boot���򣬷��ʣ�<a href="http://localhost:8080/swagger-ui.html" target="_blank" rel="noopener">http://localhost:8080/swagger-ui.html</a></li>
+<li>启动Spring Boot程序，访问：<a href="http://localhost:8080/swagger-ui.html" target="_blank" rel="noopener">http://localhost:8080/swagger-ui.html</a></li>
 </ol>
 
 </article>
-<ol class="animated rollIn hannah-toc"><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#Swagger2����RESTful-API�j�"><span class="animated rollIn hannah-toc-text">Swagger2����RESTful API�ĵ�</span></a></li></ol>
+<ol class="animated rollIn hannah-toc"><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#Swagger2构建RESTful-API文档"><span class="animated rollIn hannah-toc-text">Swagger2构建RESTful API文档</span></a></li></ol>
 <div class="animated bounceInDown paginations">
     <div class="col-md-8 col-md-push-2 col-xs-12">
         <nav>
