@@ -278,9 +278,7 @@
         
     </div>
     
-    <h1 id="Swagger2构建RESTful-API文档"><a href="#Swagger2构建RESTful-API文档" class="headerlink" title="Swagger2构建RESTful API文档"></a>Swagger2构建RESTful API文档</h1><ol>
-<li><p>添加依赖  </p>
-<pre><code>&lt;dependency&gt;
+    <h1 id="1-添加依赖"><a href="#1-添加依赖" class="headerlink" title="1. 添加依赖"></a>1. 添加依赖</h1><pre><code>&lt;dependency&gt;
     &lt;groupId&gt;io.springfox&lt;/groupId&gt;
     &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;
     &lt;version&gt;2.2.2&lt;/version&gt;
@@ -290,8 +288,7 @@
     &lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt;
     &lt;version&gt;2.2.2&lt;/version&gt;
 &lt;/dependency&gt;
-</code></pre></li>
-<li><p>在Application.java同级创建Swagger2的配置类Swagger2  </p>
+</code></pre><h1 id="2-创建类Swagger2"><a href="#2-创建类Swagger2" class="headerlink" title="2. 创建类Swagger2"></a>2. 创建类Swagger2</h1><p>在Application.java同级创建Swagger2的配置类Swagger2  </p>
 <pre><code>@Configuration
 @EnableSwagger2
 public class Swagger2 {
@@ -307,16 +304,15 @@ public class Swagger2 {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title(&quot;Spring Boot中使用Swagger2构建RESTful APIs&quot;)
-                .description(&quot;更多Spring Boot相关文章请关注：http://blog.didispace.com/&quot;)
-                .termsOfServiceUrl(&quot;http://blog.didispace.com/&quot;)
-                .contact(&quot;程序猿DD&quot;)
+                .description(&quot;yjs的博客：https://ivan4412.github.io/&quot;)
+                .termsOfServiceUrl(&quot;https://ivan4412.github.io/&quot;)
+                .contact(&quot;Ivan&apos;Bolg&quot;)
                 .version(&quot;1.0&quot;)
                 .build();
     }
 
 }
-</code></pre></li>
-<li><p>在Controller的方法中使用@ApiOperation、@ApiImplicitParams、@ApiImplicitParam注解来增加API说明  </p>
+</code></pre><h1 id="3-RESTful-API接口方法前增加API接口说明"><a href="#3-RESTful-API接口方法前增加API接口说明" class="headerlink" title="3. RESTful API接口方法前增加API接口说明"></a>3. RESTful API接口方法前增加API接口说明</h1><p>在Controller的方法中使用@ApiOperation、@ApiImplicitParams、@ApiImplicitParam注解来增加API说明  </p>
 <pre><code>@ApiOperation(value=&quot;更新用户详细信息&quot;, notes=&quot;根据url的id来指定更新对象，并根据传过来的user信息来更新用户详细信息&quot;)
 @ApiImplicitParams({
         @ApiImplicitParam(name = &quot;id&quot;, value = &quot;用户ID&quot;, required = true, dataType = &quot;Long&quot;),
@@ -330,12 +326,10 @@ public String putUser(@PathVariable Long id, @RequestBody User user) {
     users.put(id, u);
     return &quot;success&quot;;
 }
-</code></pre></li>
-<li>启动Spring Boot程序，访问：<a href="http://localhost:8080/swagger-ui.html" target="_blank" rel="noopener">http://localhost:8080/swagger-ui.html</a></li>
-</ol>
-
+</code></pre><h1 id="4-swagger文档地址"><a href="#4-swagger文档地址" class="headerlink" title="4. swagger文档地址"></a>4. swagger文档地址</h1><pre><code>启动Spring Boot程序，访问：http://localhost:8080/swagger-ui.html
+</code></pre>
 </article>
-<ol class="animated rollIn hannah-toc"><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#Swagger2构建RESTful-API文档"><span class="animated rollIn hannah-toc-text">Swagger2构建RESTful API文档</span></a></li></ol>
+<ol class="animated rollIn hannah-toc"><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#1-添加依赖"><span class="animated rollIn hannah-toc-text">1. 添加依赖</span></a></li><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#2-创建类Swagger2"><span class="animated rollIn hannah-toc-text">2. 创建类Swagger2</span></a></li><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#3-RESTful-API接口方法前增加API接口说明"><span class="animated rollIn hannah-toc-text">3. RESTful API接口方法前增加API接口说明</span></a></li><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#4-swagger文档地址"><span class="animated rollIn hannah-toc-text">4. swagger文档地址</span></a></li></ol>
 <div class="animated bounceInDown paginations">
     <div class="col-md-8 col-md-push-2 col-xs-12">
         <nav>
