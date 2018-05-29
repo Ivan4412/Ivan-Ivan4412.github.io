@@ -1,0 +1,577 @@
+
+
+<!DOCTYPE html>
+<html lang="Nodejs">
+<!--begin head-->
+<head>
+    <meta charset="utf-8">
+<!--begin title-->
+
+<title>
+    
+    Maven使用总结 |
+    
+    Ivan&#39;s Blog</title>
+<!--end title-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--begin mete-->
+
+<meta name="description" content="杨劲松的个人博客"/>
+
+<meta name="author" content="Ivan Yang"/>
+
+<!--end mete-->
+<!--begin keywords-->
+<meta name="keywords" content="Github Pages,Hexo,Java,Markdown,Maven,SpringBoot,面向对象"/>
+<!--end keywords-->
+<!--begin rss-->
+
+<link rel="alternate" href="/atom.xml" title="Ivan&#39;s Blog" type="application/atom+xml">
+
+<!--end rss-->
+<!--begin favicon-->
+
+<link rel="icon" href="/favicon.ico">
+
+<!--end favicon-->
+<!--begin style-->
+
+<!-- stylesheets list from config.yml -->
+
+<link rel="stylesheet" href="/css/hannah.css">
+
+
+<!--end style-->
+</head>
+<!--end head-->
+<!--begin body-->
+<body class="container-fluid">
+
+<!--begin menu-->
+<div class="hannah-menu">
+    <i class="fh fh-ravelry fa-2x btn fixed-menu animated bounce" id="btn_menu" aria-hidden="true"></i>
+    <div class="menu-outer container-fluid hide animated" id="div_menu">
+        <div class="row" style="margin-bottom: 5px;">
+            
+            <div class="col-md-offset-2 col-md-3 col-xs-4 text-center left-social">
+                
+                <a target="_blank" href="https://github.com/objectyan" title="GitHub"><i class="fh fh-github"></i></a>
+                
+                <style>
+                    .left-social {
+                        height: 132px;
+                        line-height: 132px;
+                        font-size: 66px;
+                    }
+
+                    .left-social * {
+                        color: #f1ce8e;
+                    }
+
+                    @media (max-width: 767px) {
+                        .left-social {
+                            line-height: 132px;
+                            font-size: 33px;
+                        }
+                    }
+                </style>
+            </div>
+            <!--begin handImg-->
+            <div class="col-md-2 col-xs-4 text-center">
+                
+                <img src="/img/logo.jpg" alt="Head Image" class="img-circle">
+                
+            </div>
+            <!--end handImg-->
+            <div class="col-md-3 col-xs-4 text-center right-social">
+                
+                <style>
+                    .right-social {
+                        height: 132px;
+                        line-height: 132px;
+                        font-size: 66px;
+                    }
+
+                    @media (max-width: 767px) {
+                        .right-social {
+                            line-height: 132px;
+                            font-size: 33px;
+                        }
+                    }
+
+                    .right-social * {
+                        color: #f1ce8e;
+                    }
+                </style>
+            </div>
+        </div>
+        <div class="row">
+            <div class="menu-content col-md-8 col-md-push-2 col-xs-12 ">
+                <dl class="menu-content-item">
+                    <dt class="menu-content-title">
+                        <i class="fh fh-bars" aria-hidden="true"></i> Menu
+                    </dt>
+                    <dd class="menu-content-content">
+                        
+                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
+                            <a href="/" class="btn btn-block">
+                                
+                                <i class="fh fh-ravelry"></i>
+                                Home
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
+                            <a href="/categories" class="btn btn-block">
+                                
+                                <i class="fh fh-cubes"></i>
+                                Category
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
+                            <a href="/tags" class="btn btn-block">
+                                
+                                <i class="fh fh-tags"></i>
+                                Tag
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
+                            <a href="/archives" class="btn btn-block">
+                                
+                                <i class="fh fh-archive"></i>
+                                Archives
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
+                            <a href="/about" class="btn btn-block">
+                                
+                                <i class="fh fh-about"></i>
+                                About
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
+                            <a href="/doc" class="btn btn-block">
+                                
+                                <i class="fh fh-document"></i>
+                                Doc
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
+                            <a href="/plug" class="btn btn-block">
+                                
+                                <i class="fh fh-plug"></i>
+                                Plug
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
+                            <a href="/sitemap" class="btn btn-block">
+                                
+                                <i class="fh fh-sitemap"></i>
+                                SiteMap
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
+                            <a href="/atom.xml" class="btn btn-block">
+                                <i class="fh fh-rss" aria-hidden="true"></i> RSS
+                            </a>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="row">
+            <div class="menu-content col-md-8 col-md-offset-2 col-xs-12 ">
+                <dl class="col-md-6 col-xs-6 menu-content-item">
+                    <dt class="menu-content-title">
+                        <i class="fh fh-cubes" aria-hidden="true"></i> Category
+                    </dt>
+                    <dd class="menu-content-content animated zoomIn">
+                        <ul class="menu-cate-list"><li class="menu-cate-list-item"><a class="menu-cate-list-link" href="/categories/Hexo/"><i class="fh fh-cube" aria-hidden="true"></i> Hexo</a><span class="menu-cate-list-count">2</span></li><li class="menu-cate-list-item"><a class="menu-cate-list-link" href="/categories/Java/"><i class="fh fh-cube" aria-hidden="true"></i> Java</a><span class="menu-cate-list-count">1</span></li><li class="menu-cate-list-item"><a class="menu-cate-list-link" href="/categories/Spring/"><i class="fh fh-cube" aria-hidden="true"></i> Spring</a><span class="menu-cate-list-count">1</span></li></ul>
+                    </dd>
+                </dl>
+                <dl class="col-md-6 col-xs-6 menu-content-item">
+                    <dt class="menu-content-title">
+                        <i class="fh fh-tag" aria-hidden="true"></i> Tags
+                    </dt>
+                    <dd class="menu-content-content animated zoomIn">
+                        <ul class="menu-tag-list"><li class="menu-tag-list-item"><a class="menu-tag-list-link" href="/tags/Github-Pages/"><i class="fh fh-tag" aria-hidden="true"></i> Github Pages</a><span class="menu-tag-list-count">1</span></li><li class="menu-tag-list-item"><a class="menu-tag-list-link" href="/tags/Hexo/"><i class="fh fh-tag" aria-hidden="true"></i> Hexo</a><span class="menu-tag-list-count">1</span></li><li class="menu-tag-list-item"><a class="menu-tag-list-link" href="/tags/Java/"><i class="fh fh-tag" aria-hidden="true"></i> Java</a><span class="menu-tag-list-count">1</span></li><li class="menu-tag-list-item"><a class="menu-tag-list-link" href="/tags/Markdown/"><i class="fh fh-tag" aria-hidden="true"></i> Markdown</a><span class="menu-tag-list-count">1</span></li><li class="menu-tag-list-item"><a class="menu-tag-list-link" href="/tags/Maven/"><i class="fh fh-tag" aria-hidden="true"></i> Maven</a><span class="menu-tag-list-count">1</span></li><li class="menu-tag-list-item"><a class="menu-tag-list-link" href="/tags/SpringBoot/"><i class="fh fh-tag" aria-hidden="true"></i> SpringBoot</a><span class="menu-tag-list-count">1</span></li><li class="menu-tag-list-item"><a class="menu-tag-list-link" href="/tags/面向对象/"><i class="fh fh-tag" aria-hidden="true"></i> 面向对象</a><span class="menu-tag-list-count">1</span></li></ul>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end menu-->
+
+<div class="row hannah-body">
+    <div class="col-md-8 col-md-push-2 col-xs-12">
+        <!--begin breadcrumb-->
+        <div class="bread-crumb">
+    <ul class="bread-crumb-menu animated rubberBand">
+        <li><a href="/"><i class="fh fh-ravelry" aria-hidden="true"></i> Home</a></li>
+        
+        <li><a href="/categories/Spring/"><i class="fh fh-cube" aria-hidden="true"></i> Spring</a>
+        </li>
+        
+        <li>
+            
+            <i class="fh fh-newspaper-o" aria-hidden="true"></i>
+            
+            Maven使用总结
+        </li>
+        
+    </ul>
+    <div class="bread-crumb-search">
+        <div class="search">
+    <i class="fh fh-search icon-search"></i>
+    <input placeholder="Search ..." onkeyup="searchFunc(this,event,'/search.xml')"
+           class="input-search animated fadeInRight"/>
+    <div class="search-result animated fadeInRight">
+        <a class="animated tada col-lg-12 search-result-item result-link" href="/2018/04/29/Maven使用总结/">Maven使用总结</a><a class="animated tada col-lg-12 search-result-item result-link" href="/2018/04/14/Java知识点复习/">Java知识点复习</a><a class="animated tada col-lg-12 search-result-item result-link" href="/2018/04/02/Markdown使用入门/">Markdown使用入门</a><a class="animated tada col-lg-12 search-result-item result-link" href="/2018/04/02/Hexo-Github-Pages搭建个人博客/">Hexo + Github Pages搭建个人博客</a>
+    </div>
+</div>
+    </div>
+</div>
+        <!--end breadcrumb-->
+        <article class="post animated rollIn">
+    <h1 class="post-title">Maven使用总结</h1>
+    <div class="post-subtitle">
+        
+        <time datetime="2018-04-29T09:31:12.000Z" class="item">
+            <i class="fh fh-calendar" aria-hidden="true"></i>&nbsp;&nbsp;2018-04-29
+        </time>
+        
+        
+        <span class="item">
+      <i class="fh fh-cubes" aria-hidden="true"></i>&nbsp;
+            
+            <a class="label label-primary tags" href="/categories/Spring/">
+           <i class="fh fh-cube" aria-hidden="true"></i>&nbsp;Spring
+        </a>
+            
+        </span>
+        
+        
+        <span class="item">
+        <i class="fh fh-tags" aria-hidden="true"></i>&nbsp;
+            
+            <a class="label label-info tags" href="/tags/Maven/">
+            <i class="fh fh-tag" aria-hidden="true"></i>&nbsp;Maven
+            </a>
+            
+            <a class="label label-info tags" href="/tags/SpringBoot/">
+            <i class="fh fh-tag" aria-hidden="true"></i>&nbsp;SpringBoot
+            </a>
+            
+        </span>
+        
+    </div>
+    
+    <h1 id="1-Maven是什么？"><a href="#1-Maven是什么？" class="headerlink" title="1. Maven是什么？"></a>1. Maven是什么？</h1><p>Maven是一个跨平台的项目管理工具，它提供了简化和标准化的项目建设过程（构建管理，依赖管理，文档生成及综合项目信息管理。  </p>
+<p>Maven的特点：  </p>
+<blockquote>
+<ol>
+<li>依赖管理。Maven自动下载所需jar，并统一管理项目中Jar包的依赖关系。  </li>
+<li>约定优于配置。约定java源码、资源、测试代码、编译代码存放位置。</li>
+<li>生命周期管理，自动构建。例mvn install就可以自动执行编译，测试，打包等构建过程。</li>
+</ol>
+</blockquote>
+<h1 id="2-Maven目录约定"><a href="#2-Maven目录约定" class="headerlink" title="2. Maven目录约定"></a>2. Maven目录约定</h1><pre><code>MavenProjectRoot(项目根目录)   
+   |----src  
+   |     |----main  
+   |     |         |----java ——存放项目的.java文件  
+   |     |         |----resources ——存放项目资源文件，如spring, hibernate配置文件  
+   |     |----test
+   |     |         |----java ——存放所有测试.java文件，如JUnit测试类  
+   |     |         |----resources ——存放项目资源文件，如spring, hibernate配置文件  
+   |----target ——项目输出位置  
+   |----pom.xml ----用于标识该项目是一个Maven项目  
+</code></pre><h1 id="3-POM文件"><a href="#3-POM文件" class="headerlink" title="3.POM文件"></a>3.POM文件</h1><p>POM文件定义了项目的一些基本信息（如，项目坐标/依赖配置/构建配置/项目信息/环境配置）</p>
+<pre><code>&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+     xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+     xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0
+        http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;!-- pom模型版本，maven2和3只能为4.0.0 --&gt;
+
+&lt;!-- 父项目基本信息 --&gt;
+&lt;parent&gt;
+    &lt;groupId&gt;com.rongdu&lt;/groupId&gt;  &lt;!-- 父项目组ID --&gt;
+    &lt;artifactId&gt;p2psys&lt;/artifactId&gt; &lt;!--父项目组中的唯一ID--&gt;
+    &lt;version&gt;2.0.0.0&lt;/version&gt;  &lt;!-- 父项目版本 --&gt;
+    &lt;relativePath&gt;../p2psys/pom.xml&lt;/relativePath&gt; &lt;!-- 父项目的pom文件存放相对位置 --&gt;
+&lt;/parent&gt;
+
+&lt;!--  子模块配置 --&gt;
+&lt;modules&gt;
+    &lt;module&gt;../p2psys-core&lt;/module&gt;
+    &lt;module&gt;../p2psys-manage&lt;/module&gt;
+&lt;/modules&gt;
+
+&lt;!-- 基本配置 --&gt;
+&lt;groupId&gt;com.rongdu.p2psys&lt;/groupId&gt;  &lt;!-- 组ID --&gt;
+&lt;artifactId&gt;p2psys-core-bank&lt;/artifactId&gt; &lt;!--在组中的唯一ID，一般为项目名或模块名 --&gt;
+&lt;version&gt;2.0.0.0&lt;/version&gt;  &lt;!-- 项目版本 --&gt;
+&lt;packaging&gt;jar&lt;/packaging&gt; &lt;!-- 项目打包方式，有以下值：pom, jar, maven-plugin, ejb, war, ear, rar, par --&gt;
+
+&lt;!-- 定义变量 --&gt;
+&lt;properties&gt;
+    &lt;junit.version&gt;1.7&lt;/junit.version&gt;
+    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+&lt;/properties&gt;
+
+
+&lt;!-- 依赖配置 --&gt;
+&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;junit&lt;/groupId&gt;
+        &lt;artifactId&gt;junit&lt;/artifactId&gt;
+        &lt;version&gt;${junit.version}&lt;/version&gt;
+        &lt;scope&gt;test&lt;/scope&gt; &lt;--依赖生命周期管理方式，值可为：compile(默认值)、test、runtime、provided、system --&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
+
+&lt;!--  父项目依赖配置方式；好处是，父项目统一版本，子项目在需要的时候引用 --&gt;
+&lt;dependencyManagement&gt;
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;junit&lt;/groupId&gt;
+            &lt;artifactId&gt;junit&lt;/artifactId&gt;
+            &lt;version&gt;4.12&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+            &lt;type&gt;&lt;/type&gt; &lt;!--依赖类型，对应项目坐标定义的packaging，默认不用声明，为jar --&gt;
+            &lt;optional&gt;&lt;/optional&gt; &lt;!-- 标记依赖是否可选--&gt;
+            &lt;exclusions&gt; &lt;!-- 排除传递性依赖 --&gt;
+                &lt;exclusion&gt;
+                    &lt;artifactId&gt;&lt;/artifactId&gt;
+                    &lt;groupId&gt;&lt;/groupId&gt;
+                &lt;/exclusion&gt;
+            &lt;/exclusions&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+&lt;/dependencyManagement&gt;
+
+&lt;!--  对应项目依赖配置方式 --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;junit&lt;/groupId&gt;
+    &lt;artifactId&gt;junit&lt;/artifactId&gt;
+&lt;/dependency&gt;
+
+&lt;!-- 构建配置 --&gt;
+&lt;build&gt;
+    &lt;directory/&gt;  &lt;!--target目录--&gt;
+    &lt;outputDirectory/&gt; &lt;!--被编译过的应用程序class文件存放的目录。--&gt;  
+    &lt;finalName/&gt; &lt;!--产生的构件的文件名--&gt; 
+    &lt;testOutputDirectory/&gt; &lt;!--被编译过的测试class文件存放的目录。--&gt;
+    &lt;sourceDirectory/&gt;  &lt;!--项目源码目录，构建系统会编译目录里的源码，相对于pom.xml的相对路径 --&gt;     
+    &lt;scriptSourceDirectory/&gt;   &lt;!--项目脚本源码目录，该目录下的内容，会被拷贝到输出目录(因为脚本是被解释的，而不是被编译的)。--&gt;    
+    &lt;testSourceDirectory/&gt;   &lt;!--项目单元测试使用的源码目录--&gt;    
+
+    &lt;!--资源路径--&gt;
+    &lt;resources&gt;     
+        &lt;resource&gt;    
+        &lt;targetPath/&gt;    &lt;!-- 资源的目标路径。相对target/classes目录--&gt;          
+        &lt;directory/&gt;    &lt;!--描述存放资源的目录，该路径相对POM路径--&gt;        
+        &lt;includes/&gt;    &lt;!--包含的模式列表，例如**/*.xml.--&gt;    
+        &lt;excludes/&gt;    &lt;!--排除的模式列表，例如**/*.xml--&gt;    
+      &lt;/resource&gt;    
+    &lt;/resources&gt; 
+
+    &lt;testResources&gt;
+      &lt;testResource&gt;
+        &lt;directory&gt;${project.basedir}/src/test/resources&lt;/directory&gt;
+      &lt;/testResource&gt;
+    &lt;/testResources&gt;
+
+    &lt;!--使用的插件列表--&gt; 
+    &lt;pluginManagement&gt;
+       &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-jar-plugin&lt;/artifactId&gt;
+            &lt;version&gt;3.0.2&lt;/version&gt;
+            &lt;configuration&gt;
+            &lt;excludes&gt;
+                &lt;exclude&gt;application.yml&lt;/exclude&gt;
+            &lt;/excludes&gt;
+        &lt;/configuration&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+    &lt;/pluginManagement&gt;
+
+   &lt;!--外部构建扩展--&gt;    
+    &lt;extensions&gt;    
+       &lt;extension&gt;       
+        &lt;groupId/&gt;     &lt;!--构建扩展的groupId--&gt;    
+        &lt;artifactId/&gt;    &lt;!--构建扩展的artifactId--&gt;      
+        &lt;version/&gt;      &lt;!--构建扩展的版本--&gt;    
+       &lt;/extension&gt;    
+    &lt;/extensions&gt;
+
+&lt;/build&gt;    
+
+&lt;!--产生报表的规范--&gt;
+&lt;reporting&gt;...&lt;/reporting&gt;
+
+&lt;!-- 项目信息 --&gt;
+&lt;name&gt;...&lt;/name&gt;
+&lt;description&gt;...&lt;/description&gt;
+&lt;url&gt;...&lt;/url&gt;
+&lt;inceptionYear&gt;...&lt;/inceptionYear&gt;
+&lt;licenses&gt;...&lt;/licenses&gt;
+&lt;organization&gt;...&lt;/organization&gt;
+&lt;developers&gt;...&lt;/developers&gt;
+&lt;contributors&gt;...&lt;/contributors&gt;
+
+&lt;!-- 环境设置 --&gt;
+&lt;issueManagement&gt;...&lt;/issueManagement&gt;
+&lt;ciManagement&gt;...&lt;/ciManagement&gt;
+&lt;mailingLists&gt;...&lt;/mailingLists&gt;
+&lt;scm&gt;...&lt;/scm&gt;
+&lt;prerequisites&gt;...&lt;/prerequisites&gt;
+&lt;repositories&gt;...&lt;/repositories&gt;
+&lt;pluginRepositories&gt;...&lt;/pluginRepositories&gt;
+&lt;distributionManagement&gt;...&lt;/distributionManagement&gt;
+&lt;profiles&gt;...&lt;/profiles&gt;
+
+&lt;/project&gt;
+</code></pre><h1 id="4-Maven的scope属性"><a href="#4-Maven的scope属性" class="headerlink" title="4. Maven的scope属性"></a>4. Maven的scope属性</h1><blockquote>
+<ol>
+<li><strong>compile</strong>：默认值，依赖项目需要参与当前项目的编译，测试，运行周期，打包时需要包含进去。  </li>
+<li><strong>test</strong>：仅参与测试的编译和执行，不会被打包</li>
+<li><strong>runtime</strong>：无需参与项目的编译，但参与后期的测试和运行周期。相比compile，跳过了编译。</li>
+<li><strong>provided</strong>：打包的时候可以不用包进去。相比compile，打包阶段做了exclude操作。</li>
+<li><strong>system</strong>：从参与度来说，和provided相同，不过被依赖项不会从maven仓库下载，而是从本地文件系统拿。需要添加systemPath的属性来定义路径。</li>
+</ol>
+</blockquote>
+<p><img src="http://p746lkse7.bkt.clouddn.com/Maven%20%E7%AE%80%E4%BB%8B/maven_scope.png" alt="&quot;Maven的scope属性&quot;" title="Maven的scope属性"></p>
+<h1 id="5-可选依赖"><a href="#5-可选依赖" class="headerlink" title="5. 可选依赖"></a>5. 可选依赖</h1><p>该依赖只对当前引用有效，不会向下传导。<br>如果A依赖于B，B中有如下依赖</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;com.my.C&lt;/groupId&gt;
+    &lt;artifactId&gt;cpt&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0&lt;/version&gt;
+    &lt;optional&gt;true&lt;/optional&gt;
+&lt;/dependency&gt;
+</code></pre><p>通过上面配置，optional为true，那么A中就不会依赖这个cpt</p>
+<h1 id="6-排除依赖"><a href="#6-排除依赖" class="headerlink" title="6. 排除依赖"></a>6. 排除依赖</h1><p>如果A–&gt;B,B–&gt;C1，通过排除依赖，A排除对C1的依赖，可替换成C2。<br>A的依赖关系如下配置：</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;com.yjs.b&lt;/groupId&gt;
+    &lt;artifactId&gt;pro-b&lt;/artifactId&gt;
+    &lt;version&gt;1.0.1&lt;/version&gt;
+    &lt;!--排除依赖--&gt;
+    &lt;exclusions&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;com.yjs.c1&lt;/groupId&gt;
+            &lt;artifactId&gt;pro-c1&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+    &lt;/exclusions&gt;
+&lt;/dependency&gt;
+&lt;!-- 引入正确依赖 --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;com.yjs.c2&lt;/groupId&gt;
+    &lt;artifactId&gt;pro-c2&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre><h1 id="7-Maven常用命令"><a href="#7-Maven常用命令" class="headerlink" title="7. Maven常用命令"></a>7. Maven常用命令</h1><p>Maven常用命令： </p>
+<ol>
+<li><p>创建Maven的普通java项目：</p>
+<pre><code>mvn archetype:create 
+-DgroupId=packageName 
+-DartifactId=projectName  
+</code></pre></li>
+<li><p>创建Maven的Web项目：</p>
+<pre><code>mvn archetype:create 
+-DgroupId=packageName    
+-DartifactId=webappName 
+-DarchetypeArtifactId=maven-archetype-webapp    
+</code></pre></li>
+<li>编译源代码： mvn compile </li>
+<li>编译测试代码：mvn test-compile    </li>
+<li>运行测试：mvn test   </li>
+<li>产生site：mvn site   </li>
+<li>打包：mvn package   </li>
+<li>在本地Repository中安装jar：mvn install </li>
+<li>清除产生的项目：mvn clean   </li>
+<li>生成eclipse项目：mvn eclipse:eclipse  </li>
+<li>生成idea项目：mvn idea:idea  </li>
+<li>组合使用goal命令，如只打包不测试：mvn -Dtest package   </li>
+<li>编译测试的内容：mvn test-compile  </li>
+<li>只打jar包: mvn jar:jar  </li>
+<li>只测试而不编译，也不测试编译：mvn test -skipping compile -skipping test-compile </li>
+<li>清除eclipse的一些系统设置:mvn eclipse:clean  </li>
+</ol>
+
+</article>
+<ol class="animated rollIn hannah-toc"><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#1-Maven是什么？"><span class="animated rollIn hannah-toc-text">1. Maven是什么？</span></a></li><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#2-Maven目录约定"><span class="animated rollIn hannah-toc-text">2. Maven目录约定</span></a></li><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#3-POM文件"><span class="animated rollIn hannah-toc-text">3.POM文件</span></a></li><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#4-Maven的scope属性"><span class="animated rollIn hannah-toc-text">4. Maven的scope属性</span></a></li><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#5-可选依赖"><span class="animated rollIn hannah-toc-text">5. 可选依赖</span></a></li><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#6-排除依赖"><span class="animated rollIn hannah-toc-text">6. 排除依赖</span></a></li><li class="animated rollIn hannah-toc-item animated rollIn hannah-toc-level-1"><a class="animated rollIn hannah-toc-link" href="#7-Maven常用命令"><span class="animated rollIn hannah-toc-text">7. Maven常用命令</span></a></li></ol>
+<div class="animated bounceInDown paginations">
+    <div class="col-md-8 col-md-push-2 col-xs-12">
+        <nav>
+            
+            <span class="page-content col-md-8 col-md-offset-2 col-xs-offset-4 col-xs-4 text-center">
+                
+            </span>
+            
+            <a href="/2018/04/14/Java知识点复习/" class="next col-md-2 col-xs-4 text-right">Next &rarr;</a>
+            
+        </nav>
+        <div>
+            <div class="col-md-6 col-xs-6 text-left">
+                
+            </div>
+            <div class="col-md-6 col-xs-6 text-right">
+                
+                Java知识点复习
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!--begin comments-->
+        
+<div class="comments" id="comments">
+    
+
+</div>
+
+
+        <!--end comments-->
+    </div>
+</div>
+
+<!--begin footer-->
+<footer id="footer" class="footer animated fadeInUp hide">
+    <p><i class="copy">&copy;</i> 2018 <a href="https://ivan4412.github.io">Ivan Yang</a> All Right Reserved.</p>
+    <p>Powered by <a href="http://hexo.io">Hexo</a>. Theme by <a href="https://github.com/objectyan/hexo-theme-hannah">hannah</a></p>
+</footer>
+<!--end footer-->
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="/js/hannah.js"></script>
+
+
+<!--begin analytics-->
+
+<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?8fb2a05be303b36faebf141d7317de43";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!--end analytics-->
+</body>
+<!--end body-->
+</html>
